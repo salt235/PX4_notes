@@ -117,8 +117,6 @@ ip addr | grep eth0
 4. 保存并连接。
 5. 每次 WSL 重启后，您都需要在 QGC 中**更新** WSL 通信链路（因为它会获得**动态 IP 地址**）。
 
-## 7. 配置clash代理（可选）
+## 7. 关于代理
 
-参考：https://github.com/nelvko/clash-for-linux-install
-
-配置好之后：clashctl help查看帮助
+win中clash开tun模式即可。
