@@ -65,5 +65,68 @@ IMU_GYRO_NF1_BW =20
 
 ![f46a089609907c9576338cedfd203094](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/f46a089609907c9576338cedfd203094.png)
 
-### 第七次起飞
+### 第七次起飞（成功）
 
+![image-20260718134022633](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718134022633.png)
+
+![image-20260718134214614](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718134214614.png)
+
+分析了Roll和Pitch的角速度图像（上图）之后，尝试调参，将Roll的D从0.003加到0.0036，将Pitch的D从0.003加到0.0034。
+
+![image-20260718134848315](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718134848315.png)
+
+![image-20260718134929943](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718134929943.png)
+
+这次起飞更有经验了，需要先接飞控，等遥控器连上了，再接电机。不然有可能遥控器还没有接上，电机就开转了，又控制不了。
+
+最终结果是D仍然加得不够多，继续将Roll的D增加到0.0042，Pitch的D也增加到0.0042。
+
+### 第八次试飞（成功）
+
+![e7c816b23c745261159f27ed6445300a](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/e7c816b23c745261159f27ed6445300a.png)
+
+Roll有一处异常，其余高度都不错。
+
+![95741f588ad68669e7abfc5f28afc2b8](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/95741f588ad68669e7abfc5f28afc2b8.png)
+
+Pitch有三处异常，看起来还是有一点超调。
+
+但是分析下面两个阶跃图，感觉其实还行，Ptich的这个图相当好了，Roll的这个图也差不多了，但是可能还需要调整一下I。
+
+![3ac1dde33cba70029626422fcc7ad027](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/3ac1dde33cba70029626422fcc7ad027.png)
+
+![4f59b519ee3b3cb249076159007079bf](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/4f59b519ee3b3cb249076159007079bf.png)
+
+同时感觉绿橙两条线距离太远了，这次准备先把K加20%，从1到1.2，再测试一次，先不改I，因为I会随着K的变化而增大。
+
+### 第九次试飞（成功）
+
+调完K之后又飞了一次，好像不应该先调K，现在这个阶跃图直接变到0.5了，于是我还把K调回去了，先调I吧。这次把Roll的i从0.2调到了0.24，加了20%。
+
+![image-20260718161730118](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718161730118.png)
+
+这次遇到的问题是，阶跃图最下面有一段黑条，然后相应反而变差了，离1更远了。考虑到可能是飞行的问题，下次准备再空中先多悬停一会，然后再给各个方向的激励。最后降落也尽量稳一些，慢慢降落下来，不kill。
+
+### 第十次试飞（大成功）
+
+这次飞得非常稳，飞了很久，落地也稳，这个阶跃图正常了，所以说飞行的时候还是需要多飞多测一会。
+
+![image-20260718164113630](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718164113630.png)
+
+![image-20260718164142387](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718164142387.png)
+
+可以看到，Pitch的图依旧很稳，然后Roll的图这次超过了一点，于是我们把Roll的I从0.24降低到0.23了。
+
+关于Yaw，我们这个貌似非常好，不用再调了。
+
+![image-20260718165550008](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718165550008.png)
+
+### 第十一次试飞（）
+
+![image-20260718170700391](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718170700391.png)
+
+![image-20260718170727592](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/image-20260718170727592.png)
+
+现在开始调角度环了，发现Roll的图像还可以，Pitch需要稍微加一点P。
+
+于是我们把Pitch的P从6.5加到了7，看看效果。
