@@ -2,9 +2,25 @@
 
 ## 组装与校准
 
+### 组装
 
+这一块我没有详细记录，主要是同组另一位同学记录组装的全过程，我这边就只贴几张过程图。
 
+![uav](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/uav.png)
 
+组装还是蛮容易的，这一块最难最重要的一部分是焊接，尝试了很久，后来终于有点熟练了。
+
+![75e6b88e4c6daf6c72ee5ede96fe0532_0](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/75e6b88e4c6daf6c72ee5ede96fe0532_0.png)
+
+我们同时组装了两台一样的无人机。
+
+![961f1a98be6f21c0b62f217461f645d7_0](https://cdn.jsdelivr.net/gh/salt235/tuchuang/img/961f1a98be6f21c0b62f217461f645d7_0.png)
+
+### 校准
+
+这一部分我也没有过多记录，组装完成后，在QGC刷一下固件；传感器一栏里面把所有的传感器按照教程校准一遍；然后再把遥控器配对，把遥控器的遥感校准，频道也设置一下；接着再电源一栏里面把电调校准；之后再校准电机，设置四个电机，确认好转向；最后设置一下安全设置。
+
+参考师兄的记录：https://app.notion.com/p/2f6b7664a095803da255c8785572a93d?v=2f6b7664a0958013a6a6000c337cbfa1&p=34fb7664a09580629c49edea0f275144&pm=s
 
 ## 试飞记录
 
