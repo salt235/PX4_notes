@@ -158,3 +158,29 @@ Pitch有三处异常，看起来还是有一点超调。
 现在开始调角度环了，发现Roll的图像还可以，Pitch需要稍微加一点P。
 
 于是我们把Pitch的P从6.5加到了7，看看效果。
+
+## 目前参数清单
+
+| 类别                  | 参数             | 当前值          |
+| --------------------- | ---------------- | --------------- |
+| **低通滤波**          | IMU_GYRO_CUTOFF  | **40 Hz**       |
+|                       | IMU_DGYRO_CUTOFF | **20 Hz**       |
+| **静态陷波滤波**      | IMU_GYRO_NF0_EN  | **Enabled (1)** |
+|                       | IMU_GYRO_NF0_FRQ | **80 Hz**       |
+|                       | IMU_GYRO_NF0_BW  | **20 Hz**       |
+|                       | IMU_GYRO_NF1_EN  | **Enabled (1)** |
+|                       | IMU_GYRO_NF1_FRQ | **160 Hz**      |
+|                       | IMU_GYRO_NF1_BW  | **20 Hz**       |
+| **IMU输出频率**       | IMU_GYRO_RATEMAX | **800 Hz**      |
+| **Roll角速度环 PID**  | MC_ROLLRATE_P    | **0.150**       |
+|                       | MC_ROLLRATE_I    | **0.230**       |
+|                       | MC_ROLLRATE_D    | **0.0042**      |
+| **Pitch角速度环 PID** | MC_PITCHRATE_P   | **0.150**       |
+|                       | MC_PITCHRATE_I   | **0.200**       |
+|                       | MC_PITCHRATE_D   | **0.0042**      |
+| **Yaw角速度环 PID**   | MC_YAWRATE_P     | **0.200**       |
+|                       | MC_YAWRATE_I     | **0.100**       |
+|                       | MC_YAWRATE_D     | **0.000**       |
+| **Roll角度环**        | MC_ROLL_P        | **6.50**        |
+| **Pitch角度环**       | MC_PITCH_P       | **7.00**        |
+| **Yaw角度环**         | MC_YAW_P         | **2.80**        |
